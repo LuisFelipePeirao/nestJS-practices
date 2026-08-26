@@ -1,0 +1,8 @@
+
+@baseUrl = http://localhost:3000
+
+### Thalles Controller teste
+
+# @name ThallesController
+
+{{baseUrl}}/thalles/hello
