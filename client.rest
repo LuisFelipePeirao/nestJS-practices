@@ -1,8 +1,41 @@
 
 @baseUrl = http://localhost:3000
 
-### Thalles Controller teste
+# @name RecadosController
 
-# @name ThallesController
+### Buscar todos os recados
 
-{{baseUrl}}/thalles/hello
+{{baseUrl}}/recados/
+?limit=15
+&offset=10
+
+### Buscar um recado
+
+{{baseUrl}}/recados/2
+
+### Cria um novo recado
+
+POST {{baseUrl}}/recados/
+Content-Type: application/json
+
+  {
+    "texto": "12345",
+    "de": "Joana",
+    "para": "João"
+  }
+
+### Atualiza um recado
+
+PATCH  {{baseUrl}}/recados/2
+Content-Type: application/json
+
+  {
+    "texto": "teste update recado teste",
+    "de": "Joana",
+    "para": "João",
+    "lido": false
+  }
+
+### Apaga recado
+
+DELETE  {{baseUrl}}/recados/2
